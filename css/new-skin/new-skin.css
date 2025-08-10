@@ -2790,6 +2790,12 @@ a.next.page-numbers:hover {
     left: 480px;
 }
 
+#other-projects-card .text ul {
+    list-style: disc;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
 @media (max-width: 1120px) {
     .disable-sidebar.no-sticky-menu .card-inner,
     .no-sidebar .no-sticky-menu .card-inner {
