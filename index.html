@@ -84,6 +84,48 @@
         gtag('config', 'UA-125314689-11');
     </script>
 
+    <!-- Custom styles to hide unused default portfolio items -->
+    <style>
+        /* Hide default template portfolio entries so only personalised projects and research appear */
+        .row.grid-items .grid-item.photo,
+        .row.grid-items .grid-item.gallery,
+        .row.grid-items .grid-item.music,
+        .row.grid-items .grid-item.video,
+        .row.grid-items .grid-item.design {
+            display: none !important;
+        }
+
+        /* Hide all but the final grid row in the works section.
+           Multiple grid rows existed after customisations (some from the original template
+           and an early misplaced insertion). To ensure only the intended set of projects
+           and research items are displayed, hide every grid row except the last one within
+           the works card. */
+        #works-card .row.grid-items.border-line-v:not(:last-of-type) {
+            display: none !important;
+        }
+
+        /* Hide any standalone photo items (e.g., leftover template images like motorcycle helmet) */
+        #works-card .grid-item.photo {
+            display: none !important;
+        }
+
+        /* Custom gallery grid for media sections */
+        .gallery-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .gallery-grid a {
+            flex: 1 1 calc(33.333% - 10px);
+            display: block;
+        }
+        .gallery-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -210,21 +252,20 @@
 
                     <!-- profile socials -->
                     <div class="social">
-                        <a target="_blank" href="https://dribbble.com/"><span class="fa fa-dribbble"></span></a>
-                        <a target="_blank" href="https://twitter.com/"><span class="fa fa-twitter"></span></a>
-                        <a target="_blank" href="https://github.com/"><span class="fa fa-github"></span></a>
-                        <a target="_blank" href="https://www.spotify.com/"><span class="fa fa-spotify"></span></a>
-                        <a target="_blank" href="https://stackoverflow.com/"><span class="fa fa-stack-overflow"></span></a>
+                        <!-- Use only relevant professional networks -->
+                        <a target="_blank" href="https://www.linkedin.com/in/md-tanvir-alam-sifat"><span class="fa fa-linkedin"></span></a>
+                        <a target="_blank" href="https://github.com/mdtanvir"><span class="fa fa-github"></span></a>
+                        <a target="_blank" href="mailto:tanviralam0047@gmail.com"><span class="fa fa-envelope"></span></a>
                     </div>
 
                     <!-- profile buttons -->
                     <div class="lnks">
-                        <a href="#" class="lnk">
-							<span class="text">Download CV</span>
-						</a>
-                        <a href="#" class="lnk discover">
-							<span class="text">Contact Me</span>
-						</a>
+                        <a href="Tanvir_Alam_Sifat_CV.pdf" class="lnk" download>
+                            <span class="text">Download CV</span>
+                        </a>
+                        <a href="#contacts-card" class="lnk discover">
+                            <span class="text">Contact Me</span>
+                        </a>
                     </div>
 
                 </div>
@@ -250,11 +291,11 @@
                             <div class="col col-m-13 border-line-v">
                                 <div class="text-box">
                                     <p>
-                                        Hello, I’m Tanvir, a tech enthusiast with a passion for solving complex problems through innovative digital solutions. With extensive experience in software architecture, digital product development, project management and business analysis. I’ve had the privilege of leading diverse projects, from enterprise software serving millions to cutting-edge robotics and IoT initiatives.
+                                        Hello, I’m <strong>Md.&nbsp;Tanvir&nbsp;Alam&nbsp;Sifat</strong>. I’m passionate about leveraging technology to drive social impact and financial inclusion. My professional journey spans software architecture, digital product development, project management and research in areas such as ICT4D (Information and Communication Technologies for Development), digital financial services and AI for social good.
                                         <br>
-                                        My academic foundation in Computer Science, paired with industry certifications, enables me to bridge technical expertise and strategic planning. Recognized for my contributions in technology and leadership, I thrive on driving impactful transformations. 
+                                        As a manager in microfinance technology at BRAC I lead the development and deployment of enterprise software that serves millions of clients and thousands of staff. I previously managed SaaS products at Digicon Technologies and have hands‑on experience designing mobile, web and IoT solutions. I hold a B.Sc. in Computer Science and continuously up‑skill through certifications in business analysis, project management and digital finance.
                                         <br>
-                                        Outside of work, I enjoy mentoring aspiring professionals and engaging in meaningful community activities.
+                                        Beyond work, I actively engage with community and professional organisations, mentor aspiring technologists and advocate for responsible innovation.
 
                                     </p>
                                 </div>
@@ -272,16 +313,13 @@
                             <div class="clear"></div>
                         </div>
 
-                    </div>
+                        <!-- custom portfolio projects and research items
+                        <div class="row grid-items border-line-v">--> 
+                           
 
-                    
-                    
-                   
+
                             
-                    <!-- Quote -->
-                    <div class="content quote">
-
-                        <!-- title -->
+                             <!-- title -->
                         <div class="title">
                             <span>Quote</span>
                         </div>
@@ -308,6 +346,413 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="clear"></div>
+                        </div>
+
+                            
+                           
+
+                            
+
+                            
+                                
+                        </div>
+
+                    </div>
+
+                    
+                    
+                   
+                            
+                   
+                    <!-- Quote -->
+                    <div class="content quote">
+
+                       
+
+                        <!-- Custom Works Row (hidden) -->
+                        <div class="row grid-items border-line-v" style="display: none;">
+                            <!-- Biometric Solutions for Financial Access -->
+                            <div class="col col-d-6 col-t-6 col-m-12 grid-item project border-line-h">
+                                <div class="box-item">
+                                    <div class="image">
+                                        <a href="#popup-biometric-2" class="has-popup-media">
+                                            <img src="images/works//bio/bio-1.jpg" alt="Biometric Solutions for Financial Access" />
+                                            <span class="info">
+                                                <span class="ion ion-images"></span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="desc">
+                                        <a href="#popup-biometric-2" class="name has-popup-media">Biometric Solutions for Financial Access</a>
+                                        <div class="category">Projects</div>
+                                    </div>
+                                    <div id="popup-biometric-2" class="popup-box mfp-fade mfp-hide">
+                                        <div class="content">
+                                            <div class="image">
+                                                <img src="images/works//bio/bio-1.jpg" alt="Biometric Solutions">
+                                            </div>
+                                            <div class="desc">
+                                                <div class="post-box">
+                                                    <h1>Biometric Solutions for Financial Access</h1>
+                                                    <div class="blog-detail">Solution Architecture &amp; Project Leadership</div>
+                                                    <div class="blog-content">
+                                                        <p>
+                                                            Designed and led the development of a secure biometric system enabling fingerprint‑based client enrolment and loan disbursement in remote areas, eliminating the need for branch visits.
+                                                        </p>
+                                                        <h2>Pilot &amp; Impact</h2>
+                                                        <ul>
+                                                            <li>Piloted across seven branches with over 1,200 clients onboarded and 100+ loan disbursements via doorstep services.</li>
+                                                            <li>Enhanced operational efficiency, client security and financial access for rural populations.</li>
+                                                        </ul>
+                                                        <h2>Next Phase</h2>
+                                                        <p>
+                                                            Currently advancing the platform with AI‑powered image‑based biometric verification to replace physical fingerprint devices. This scalable solution will roll out across 3,000+ branches nationwide to boost financial inclusion and reduce fraud.
+                                                        </p>
+                                                        <h2>Media</h2>
+                                                        <div class="image">
+                                                            <img src="images/works//bio/bio-1.jpg" alt="Biometric System illustration">
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- MFS Repayment Collection & Account Management -->
+                            <div class="col col-d-6 col-t-6 col-m-12 grid-item project border-line-h">
+                                <div class="box-item">
+                                    <div class="image">
+                                        <a href="#popup-mfs-2" class="has-popup-media">
+                                            <img src="images/works/MFS/mfs-1.png" alt="MFS Repayment Collection" />
+                                            <span class="info">
+                                                <span class="ion ion-images"></span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="desc">
+                                        <a href="#popup-mfs-2" class="name has-popup-media">MFS Repayment Collection &amp; Account Management</a>
+                                        <div class="category">Projects</div>
+                                    </div>
+                                    <div id="popup-mfs-2" class="popup-box mfp-fade mfp-hide">
+                                        <div class="content">
+                                            <div class="image">
+                                                <img src="images/works/MFS/mfs-2.png" alt="MFS Repayment Collection">
+                                            </div>
+                                            <div class="desc">
+                                                <div class="post-box">
+                                                    <h1>MFS Repayment Collection &amp; Account Management</h1>
+                                                    <div class="blog-detail">Project Leadership &amp; API Integration</div>
+                                                    <div class="blog-content">
+                                                        <p>
+                                                            Integrated a Mobile Financial Service (MFS) within BRAC Microfinance’s collection app to enable secure collection of loan instalments and savings through digital payments.
+                                                        </p>
+                                                        <ul>
+                                                            <li>Empowered 20&nbsp;k field officials to collect repayments efficiently, benefiting 10&nbsp;million clients.</li>
+                                                            <li>Integrated bKash webhook API and two BRAC ERP APIs to automate payment workflows.</li>
+                                                            <li>Saved time and transaction costs while reducing fraud and manual errors.</li>
+                                                        </ul>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Digital Cash Transfer (DCT) Platform -->
+                            <div class="col col-d-6 col-t-6 col-m-12 grid-item project border-line-h">
+                                <div class="box-item">
+                                    <div class="image">
+                                            <a href="#popup-dct-2" class="has-popup-media">
+                                            <img src="images/works/dct.jpg" alt="Digital Cash Transfer" />
+                                            <span class="info">
+                                                <span class="ion ion-images"></span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="desc">
+                                        <a href="#popup-dct-2" class="name has-popup-media">Digital Cash Transfer (DCT) Platform</a>
+                                        <div class="category">Projects</div>
+                                    </div>
+                                    <div id="popup-dct-2" class="popup-box mfp-fade mfp-hide">
+                                        <div class="content">
+                                            <div class="image">
+                                                <img src="images/works/dct.jpg" alt="DCT Platform">
+                                            </div>
+                                            <div class="desc">
+                                                <div class="post-box">
+                                                    <h1>Digital Cash Transfer (DCT) Platform</h1>
+                                                    <div class="blog-detail">Product Design &amp; System Integration</div>
+                                                    <div class="blog-content">
+                                                        <p>
+                                                            Created a versatile digital cash transfer platform serving all 17+ BRAC programmes and acting as an alternative loan disbursement channel for microfinance clients.
+                                                        </p>
+                                                        <ul>
+                                                            <li>Integrated four core bKash APIs to automate beneficiary disbursements securely and efficiently.</li>
+                                                            <li>Facilitated fast, reliable and transparent cash transfers to beneficiaries across Bangladesh.</li>
+                                                            <li>Improved financial inclusion and reduced the need for physical cash handling.</li>
+                                                        </ul>
+                                                        <h2>Media</h2>
+                                                        <div class="image">
+                                                            <img src="images/works/dct.jpg" alt="Digital cash transfer illustration">
+                                                        </div>
+                                                        <div class="image">
+                                                            <iframe src="https://player.vimeo.com/video/97102654" width="100%" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Branch Management & Sales Monitoring (BMSM) App -->
+                            <div class="col col-d-6 col-t-6 col-m-12 grid-item project border-line-h">
+                                <div class="box-item">
+                                    <div class="image">
+                                        <a href="#popup-bmsm-2" class="has-popup-media">
+                                            <img src="images/works/bmsm.jpg" alt="Branch Management App" />
+                                            <span class="info">
+                                                <span class="ion ion-images"></span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="desc">
+                                        <a href="#popup-bmsm-2" class="name has-popup-media">Branch Management &amp; Sales Monitoring App</a>
+                                        <div class="category">Projects</div>
+                                    </div>
+                                    <div id="popup-bmsm-2" class="popup-box mfp-fade mfp-hide">
+                                        <div class="content">
+                                            <div class="image">
+                                                <img src="images/works/bmsm.jpg" alt="BMSM App">
+                                            </div>
+                                            <div class="desc">
+                                                <div class="post-box">
+                                                    <h1>Branch Management &amp; Sales Monitoring App</h1>
+                                                    <div class="blog-detail">Product Manager &amp; Technical Lead</div>
+                                                    <div class="blog-content">
+                                                        <p>
+                                                            Led development of a mobile application connected to BRAC Microfinance’s core banking system to provide real‑time reporting and analytics for branch managers.
+                                                        </p>
+                                                        <ul>
+                                                            <li>Delivered 30+ operational and sales reports accessible to over 3,000 branch managers.</li>
+                                                            <li>Enhanced oversight, decision‑making and resource allocation.</li>
+                                                            <li>Significantly reduced paper use and saved managers’ time.</li>
+                                                        </ul>
+                                                        <h2>Media</h2>
+                                                        <div class="image">
+                                                            <img src="images/works/bmsm.jpg" alt="Branch management illustration">
+                                                        </div>
+                                                        <div class="image">
+                                                            <iframe src="https://player.vimeo.com/video/97102654" width="100%" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col col-d-6 col-t-6 col-m-12 grid-item research border-line-h">
+                                <div class="box-item">
+                                    <div class="image">
+                                        <a href="#popup-atom-2" class="has-popup-media">
+                                            <img src="images/works/atom.jpg" alt="ATOM Robot" />
+                                            <span class="info">
+                                                <span class="ion ion-images"></span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="desc">
+                                        <a href="#popup-atom-2" class="name has-popup-media">ATOM Robot – Indoor Service Robot</a>
+                                        <div class="category">Research</div>
+                                    </div>
+                                    <div id="popup-atom-2" class="popup-box mfp-fade mfp-hide">
+                                        <div class="content">
+                                            <div class="image">
+                                                <img src="images/works/atom.jpg" alt="ATOM Robot">
+                                            </div>
+                                            <div class="desc">
+                                                <div class="post-box">
+                                                    <h1>ATOM Robot – Revolutionizing Indoor Service</h1>
+                                                    <div class="blog-detail">R&amp;D Project, Robotics &amp; IoT</div>
+                                                    <div class="blog-content">
+                                                        <p>
+                                                            ATOM is an intelligent indoor service robot designed for versatile tasks such as goods transportation, floor cleaning and delivery services.
+                                                        </p>
+                                                        <ul>
+                                                            <li>Features dynamic path planning using IR sensors for line‑grid paths or a camera for virtual grid paths with fiducial markers.</li>
+                                                            <li>Supports payloads of over 20&nbsp;kg and can be controlled via mobile applications.</li>
+                                                            <li>Demonstrates how IoT and robotics can transform service delivery in indoor environments.</li>
+                                                        </ul>
+                                                        <h2>Media</h2>
+                                                        <div class="image">
+                                                            <img src="images/works/atom.jpg" alt="ATOM robot illustration">
+                                                        </div>
+                                                        <div class="image">
+                                                            <iframe src="https://player.vimeo.com/video/97102654" width="100%" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Falcon Training Device -->
+                            <div class="col col-d-6 col-t-6 col-m-12 grid-item research border-line-h">
+                                <div class="box-item">
+                                    <div class="image">
+                                        <a href="#popup-falcon-2" class="has-popup-media">
+                                            <img src="images/works/falcon.jpg" alt="Falcon Training Device" />
+                                            <span class="info">
+                                                <span class="ion ion-images"></span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="desc">
+                                        <a href="#popup-falcon-2" class="name has-popup-media">Falcon Training Device</a>
+                                        <div class="category">Research</div>
+                                    </div>
+                                    <div id="popup-falcon-2" class="popup-box mfp-fade mfp-hide">
+                                        <div class="content">
+                                            <div class="image">
+                                                <img src="images/works/falcon.jpg" alt="Falcon Training Device">
+                                            </div>
+                                            <div class="desc">
+                                                <div class="post-box">
+                                                    <h1>Falcon Training Device</h1>
+                                                    <div class="blog-detail">R&amp;D Project, Mobile &amp; RF Control</div>
+                                                    <div class="blog-content">
+                                                        <p>
+                                                            Developed a training device for falconry that utilises radio frequency for remote operation in off‑grid locations such as deserts.
+                                                        </p>
+                                                        <ul>
+                                                            <li>Controlled via mobile applications using intranet connectivity to enable seamless operation without cellular networks.</li>
+                                                            <li>Showcases innovative use of wireless communication and IoT to train animals in remote environments.</li>
+                                                        </ul>
+                                                        <h2>Media</h2>
+                                                        <div class="image">
+                                                            <img src="images/works/falcon.jpg" alt="Falcon training illustration">
+                                                        </div>
+                                                        <div class="image">
+                                                            <iframe src="https://player.vimeo.com/video/97102654" width="100%" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 2D Surface Mapping for Mine Detection -->
+                            <div class="col col-d-6 col-t-6 col-m-12 grid-item research border-line-h">
+                                <div class="box-item">
+                                    <div class="image">
+                                        <a href="#popup-mapping-main" class="has-popup-media">
+                                            <img src="images/works/mine_mapping.jpg" alt="2D Surface Mapping" />
+                                            <span class="info">
+                                                <span class="ion ion-images"></span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="desc">
+                                        <a href="#popup-mapping-main" class="name has-popup-media">2D Surface Mapping for Mine Detection</a>
+                                        <div class="category">Research</div>
+                                    </div>
+                                    <div id="popup-mapping-main" class="popup-box mfp-fade mfp-hide">
+                                        <div class="content">
+                                            <div class="image">
+                                                <img src="images/works/mine_mapping.jpg" alt="Mine Mapping Research">
+                                            </div>
+                                            <div class="desc">
+                                                <div class="post-box">
+                                                    <h1>2D Surface Mapping for Mine Detection</h1>
+                                                    <div class="blog-detail">ICCRE 2017 – Published Research</div>
+                                                    <div class="blog-content">
+                                                        <p>
+                                                            Explored the use of wireless networking and 2D surface mapping techniques to detect buried mines. This research focused on improving safety and accuracy in de‑mining operations by using intelligent mapping algorithms.
+                                                        </p>
+                                                        <ul>
+                                                            <li>Developed algorithms to generate two‑dimensional maps of subterranean surfaces.</li>
+                                                            <li>Presented at the ICCRE 2017 conference (Paper ID: ICCRE2017‑077).</li>
+                                                        </ul>
+                                                        <h2>Media</h2>
+                                                        <div class="image">
+                                                            <img src="images/works/mine_mapping.jpg" alt="Mine detection illustration">
+                                                        </div>
+                                                        <div class="image">
+                                                            <iframe src="https://player.vimeo.com/video/97102654" width="100%" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+
+
+
+                            <!-- Adventure of Brave Mom – RPG Game -->
+                            <div class="col col-d-6 col-t-6 col-m-12 grid-item research border-line-h">
+                                <div class="box-item">
+                                    <div class="image">
+                                        <a href="#popup-rpg-2" class="has-popup-media">
+                                            <img src="images/works/rpg_game.jpg" alt="Adventure of Brave Mom RPG" />
+                                            <span class="info">
+                                                <span class="ion ion-images"></span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="desc">
+                                        <a href="#popup-rpg-2" class="name has-popup-media">Adventure of Brave Mom – RPG Game</a>
+                                        <div class="category">Research</div>
+                                    </div>
+                                    <div id="popup-rpg-2" class="popup-box mfp-fade mfp-hide">
+                                        <div class="content">
+                                            <div class="image">
+                                                <img src="images/works/rpg_game.jpg" alt="Adventure of Brave Mom">
+                                            </div>
+                                            <div class="desc">
+                                                <div class="post-box">
+                                                    <h1>Adventure of Brave Mom – Role‑Playing Game</h1>
+                                                    <div class="blog-detail">Research &amp; Development</div>
+                                                    <div class="blog-content">
+                                                        <p>
+                                                            A role‑playing educational game designed for expectant and new mothers to learn about maternal and child health through interactive storytelling and gameplay.
+                                                        </p>
+                                                        <ul>
+                                                            <li>Developed under the supervision of Professor Farruk Ahmed at Independent University, Bangladesh.</li>
+                                                            <li>Investigated how game mechanics can enhance learning and retention in health education.</li>
+                                                        </ul>
+                                                        <h2>Media</h2>
+                                                        <div class="image">
+                                                            <img src="images/works/rpg_game.jpg" alt="RPG game illustration">
+                                                        </div>
+                                                        <div class="image">
+                                                            <iframe src="https://player.vimeo.com/video/97102654" width="100%" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="clear"></div>
                         </div>
 
@@ -348,34 +793,37 @@
 
                                         </div>
                                         <div class="company">Bangladesh</div>
-                                        <p>
-                                            Bachelor's Degree in Computer Science
+                                            <p>
+                                            B.Sc. in Computer Science, CGPA&nbsp;3.32/4.00 (2013–2017)
                                         </p>
                                     </div>
                                     
                                 </div>
                             </div>
 
-                            <!-- education -->
+                            <!-- education: college and school -->
                             <div class="col col-d-6 col-t-6 col-m-12 border-line-v">
                                 <div class="resume-title border-line-h">
-                                    <div class=""></div>
-                                    <div class="name"></div>
+                                    <div class="icon"><i class="fa fa-graduation-cap"></i></div>
+                                    <div class="name">Other Education</div>
                                 </div>
                                 <div class="resume-items">
+                                    <!-- Higher Secondary -->
                                     <div class="resume-item border-line-h">
-                                        
                                         <div class="name">
-                                            <a href="https://www.dhakacitycollege.edu.bd/" target="_blank">Dhaka City College, Bangladesh </a>
-
-
+                                            <a href="https://www.dhakacitycollege.edu.bd/" target="_blank">Dhaka City College, Bangladesh</a>
                                         </div>
                                         <div class="company">Bangladesh</div>
-                                        <p>
-                                            Higher Secondary Certificate in Science
-                                        </p>
+                                        <p>Higher Secondary Certificate in Science, CGPA&nbsp;4.30/5.00 (2010–2012)</p>
                                     </div>
-                                    
+                                    <!-- Secondary School -->
+                                    <div class="resume-item">
+                                        <div class="name">
+                                            <a href="#" target="_blank">Willes Little Flower School and College, Bangladesh</a>
+                                        </div>
+                                        <div class="company">Bangladesh</div>
+                                        <p>Secondary School Certificate in Science, CGPA&nbsp;5.00/5.00 (2008–2010)</p>
+                                    </div>
                                 </div>
                             </div>
 
@@ -393,87 +841,60 @@
                                 </div>
                                 <div class="resume-items">
                                     <div class="resume-item border-line-h active">
-                                        <div class="date">2020 - Present</div>
-                                        <div class="name">Manager, Enterprise Application, Microfinance Technology </div>
-                                        <div class="company"><a href="https://www.brac.net/program/microfinance/" target="_blank"> BRAC </a> </div>
+                                        <div class="date">Feb&nbsp;2020 – Present</div>
+                                        <div class="name">Manager, Enterprise Application – Microfinance Technology</div>
+                                        <div class="company"><a href="https://www.brac.net/program/microfinance/" target="_blank">BRAC</a></div>
                                         <p>
                                             <ul>
-                                                <li>Led enterprise application projects at BRAC, transforming microfinance operations for <em>30,000+ staffs</em> and <em>11M clients.</em></li>
-                                                <li>Digitized loan processing, repayments, and client onboarding, reducing processing <em>time by 60 minutes/request.</em></li>
-                                                <li>Eliminated <em>47.7M pages</em> annually, <em>saving 115.1M BDT</em> and cutting carbon emissions by <em>141,065 kg CO2.</em></li>
-
-                                            </ul> 
+                                                <li>Manage end‑to‑end development and deployment of enterprise software applications aligned with organisational strategy and financial architecture.</li>
+                                                <li>Lead requirements analysis, budgeting, risk mitigation and vendor coordination to support programmes serving seven&nbsp;million+ clients and tens of thousands of staff.</li>
+                                                <li>Drive the microfinance digital roadmap, ensuring secure, scalable and user‑centric solutions that advance financial inclusion.</li>
+                                            </ul>
                                         </p>
                                     </div>
                                     <div class="resume-item border-line-h">
-                                        <div class="date">2018 - 2020</div>
-                                        <div class="name">Software Development Manager </div>
-                                        <div class="company"><a href="https://digicontechnologies.com/" target="_blank"> Digicon Technologies Ltd </a> </div>
+                                        <div class="date">Jan&nbsp;2018 – Jan&nbsp;2020</div>
+                                        <div class="name">Assistant Manager – Software Development</div>
+                                        <div class="company"><a href="https://digicontechnologies.com/" target="_blank">Digicon Technologies Ltd</a></div>
                                         <p>
-                                            
-                                      <ul>
-                                          <li>
-                                            Developed and launched successful SaaS products, including Social Media Monitoring Tools, Chatbots, and Customer Relationship Systems, serving 10 million customers across 10 different service businesses.
-                                          </li>
-                                          <li>
-                                            Delivered impactful solutions for industries such as :
                                             <ul>
-                                              &nbsp;<li>Healthcare systems for hospitals like LABAID.</li>
-                                              &nbsp;<li>Logistics customer service systems for companies like Bajaj and Uttara Motors.</li>
-                                              &nbsp;<li>Tools for Telecommunication companies like Grameenphone Ltd. and Robi Axiata Limited.</li>
+                                                <li>Led multiple software projects from initiation to final deployment as team lead and primary client contact.</li>
+                                                <li>Architected and built SaaS products – including social media monitoring tools, chatbots and customer relationship systems – that collectively served millions of end users.</li>
+                                                <li>Delivered tailored solutions across healthcare (e.g.&nbsp;LABAID hospitals), logistics (Bajaj, Uttara Motors) and telecommunications (Grameenphone, Robi Axiata) while contributing to public service projects such as city waste management, dengue campaigns and the National Board of Revenue’s processing centre.</li>
                                             </ul>
-                                          </li>
-                                          <li>
-                                            Contributed to public service improvement initiatives, including:
-                                            <ul>
-                                              <li>Dhaka Waste Management.</li>
-                                              <li>Dengue Campaigns for Dhaka North City Corporation.</li>
-                                              <li>Central Processing System of the National Board of Revenue, Bangladesh.</li>
-                                            </ul>
-                                          </li>
-                                        </ul>
-
-
-
                                         </p>
                                     </div>
                                     <div class="resume-item">
-                                        <div class="date">2017 - 2018</div>
-                                        <div class="name">Software engineer</div>
-                                        <div class="company"><a href="https://www.facebook.com/binarycase5?mibextid=ZbWKwL" target="_blank"> Binary Case </a> </div>
+                                        <div class="date">Jan&nbsp;2017 – Dec&nbsp;2017</div>
+                                        <div class="name">Software Engineer</div>
+                                        <div class="company"><a href="https://www.facebook.com/binarycase5?mibextid=ZbWKwL" target="_blank">Binary Case</a></div>
                                         <p>
                                             <ul>
-                                                <li>Designed responsive webs application, developed desktop applications, created mobile applications, and implemented ERP systems.</li>
-                    
-
-                                            </ul> 
+                                                <li>Designed responsive web applications, developed desktop and mobile apps and implemented ERP systems to improve client operations.</li>
+                                            </ul>
                                         </p>
                                     </div>
 
 
                                     <div class="resume-item">
-                                        <div class="date">2017 - 2018</div>
+                                        <div class="date">Oct&nbsp;2017 – Dec&nbsp;2017</div>
                                         <div class="name">Executive Trainer</div>
-                                        <div class="company"><a href="https://bcc.gov.bd/" target="_blank"> Bangladesh Computer Council (BCC) </a> </div>
+                                        <div class="company"><a href="https://bcc.gov.bd/" target="_blank">Bangladesh Computer Council (BCC)</a></div>
                                         <p>
                                             <ul>
-                                                <li>Conducted "Graphics Designing" training for disabled students as part of a Government Project organized by the Centre for Services and Information on Disability (CSID), powered by the Bangladesh Computer Council (BCC).</li>
-                    
-
-                                            </ul> 
+                                                <li>Conducted graphics design training for differently‑abled students as part of a government project organised by the Centre for Services and Information on Disability (CSID) and powered by the Bangladesh Computer Council.</li>
+                                            </ul>
                                         </p>
                                     </div>
 
                                     <div class="resume-item">
-                                        <div class="date">2016 - 2017</div>
+                                        <div class="date">Mar&nbsp;2016 – Feb&nbsp;2017</div>
                                         <div class="name">Research Assistant</div>
-                                        <div class="company"><a href="http://www.cse.iub.edu.bd/faculties/12" target="_blank"> Independent University, Bangladesh </a> </div>
+                                        <div class="company"><a href="http://www.cse.iub.edu.bd/faculties/12" target="_blank">Independent University, Bangladesh</a></div>
                                         <p>
                                             <ul>
-                                                <li>Conducted a research project titled "Role-playing Educational Game as a Learning Tool" in collaboration with Professor Farruk Ahmed from IUB. Developed an educational game for mothers called "The Adventure of a New Mother.</li>
-                    
-
-                                            </ul> 
+                                                <li>Collaborated with Professor&nbsp;Farruk&nbsp;Ahmed on a project exploring role‑playing games as learning tools and co‑developed an educational game for mothers titled <em>The Adventure of a New Mother</em>.</li>
+                                            </ul>
                                         </p>
                                     </div>
 
@@ -507,67 +928,37 @@
                                     
                                     <ul>
                                         <li class="border-line-h">
-                                            <div class="name">Software Architecture Design & Development: </div>
-                                            <div class="">
-                                                <div class="company"></div>
-                                                <div class="company"><a href="" target="_blank"> Over 20+ Software Projects.</a> </div>
-                                            </div>
+                                            <div class="name">Software Architecture &amp; Development</div>
+                                            <div class="company">Led more than 20 software projects</div>
                                         </li>
                                         <li class="border-line-h">
-                                            <div class="name">Project Management and Business Analysis:  </div>
-                                            <div class="">
-                                                <div class="company"></div>
-                                                <div class="company"><a href="" target="_blank"> Over 30+ Digitization Projects in Agile Methodologies.</a> </div>
-                                            </div>
+                                            <div class="name">Project Management &amp; Business Analysis</div>
+                                            <div class="company">Delivered 30+ digitisation projects using agile methodologies</div>
                                         </li>
                                         <li class="border-line-h">
-                                            <div class="name">Programming & Database:  </div>
-                                            <div class="">
-                                                <div class="company"></div>
-                                                <div class="company"><a href="" target="_blank"> PHP, C/C++, Javascript, Java, Node.js, Andrioid,  MySQL, PostgreSQL</a> </div>
-                                            </div>
-                                        </li>
-
-                                        <li class="border-line-h">
-                                            <div class="name">Tools </div>
-                                            <div class="">
-                                                <div class="company"></div>
-                                                <div class="company"><a href="" target="_blank"> JIRA, Putty, gitHub,IntelliJ IDEA, Xampp, WinSCP, Visual Studio, NetBeans, Android Studio, Blender 3d, Iclone 6 , CrazyTalk Animator, Photoshop, Illustrator,</a> </div>
-                                            </div>
-                                        </li>
-
-                                        <li class="border-line-h">
-                                            <div class="name">API Design, Development and Implementation:  </div>
-                                            <div class="">
-                                                <div class="company"></div>
-                                                <div class="company"><a href="" target="_blank"> Designed and Managed development over 50+ Rest API, 5 SOAP API</a> </div>
-                                            </div>
+                                            <div class="name">Programming &amp; Databases</div>
+                                            <div class="company">PHP, C/C++, Java, JavaScript, Node.js, Android, MySQL, PostgreSQL</div>
                                         </li>
                                         <li class="border-line-h">
-                                            <div class="name">Robotics an IOT:  </div>
-                                            <div class="">
-                                                <div class="company"></div>
-                                                <div class="company"><a href="" target="_blank"> Completed 2 Robotics & IOT projects</a> </div>
-                                            </div>
+                                            <div class="name">API Design &amp; Management</div>
+                                            <div class="company">Designed and managed 50+ REST APIs and 5 SOAP APIs</div>
                                         </li>
-
                                         <li class="border-line-h">
-                                            <div class="name">Mobile Application:   </div>
-                                            <div class="">
-                                                <div class="company"></div>
-                                                <div class="company"><a href="" target="_blank"> Designed, Developed and Implemented 5 Mobile Application Projects </a> </div>
-                                            </div>
+                                            <div class="name">Robotics &amp; IoT</div>
+                                            <div class="company">Completed two robotics and IoT projects</div>
                                         </li>
-
                                         <li class="border-line-h">
-                                            <div class="name">DevOps:   </div>
-                                            <div class="">
-                                                <div class="company"></div>
-                                                <div class="company"><a href="" target="_blank"> 20+ application managing using Cloud Platform (GCP, AWS, Azure) </a> </div>
-                                            </div>
+                                            <div class="name">Mobile Applications</div>
+                                            <div class="company">Designed, developed and implemented five mobile app projects</div>
                                         </li>
-                                        
-                                        
+                                        <li class="border-line-h">
+                                            <div class="name">DevOps &amp; Cloud</div>
+                                            <div class="company">Managed 20+ applications on GCP, AWS and Azure</div>
+                                        </li>
+                                        <li class="border-line-h">
+                                            <div class="name">Tools &amp; Platforms</div>
+                                            <div class="company">JIRA, Git, IntelliJ&nbsp;IDEA, XAMPP, WinSCP, Visual&nbsp;Studio, NetBeans, Android&nbsp;Studio, Blender, iClone, CrazyTalk&nbsp;Animator, Photoshop, Illustrator</div>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -584,36 +975,15 @@
                                         <div class="name">Knowledge</div>
                                     </div>
                                     <ul>
-                                        <li>
-                                            <div class="name"> IT & Telecommunication</div>
-                                        </li>
-                                        <li>
-                                            <div class="name">Fintech</div>
-                                        </li>
-                                        <li>
-                                            <div class="name">NGO</div>
-                                        </li>
-                                        <li>
-                                            <div class="name">Microfinance</div>
-                                        </li>
-                                        <li>
-                                            <div class="name">Bank & Mobile Financial Service (MFS)</div>
-                                        </li>
-                                        <li>
-                                            <div class="name"> Accounting/Finance </div>
-                                        </li>
-                                        <li>
-                                            <div class="name"> Education/Training </div>
-                                        </li>
-                                        <li>
-                                            <div class="name"> HR/Org. Development /div>
-                                        </li>
-                                        <li>
-                                            <div class="name"> Hospitality/ Travel/ Tourism</div>
-                                        </li>
-                                        <li>
-                                            <div class="name"> IOT & Robotics</div>
-                                        </li>
+                                        <li><div class="name">ICT4D &amp; Digital Financial Services</div></li>
+                                        <li><div class="name">Human‑Computer Interaction</div></li>
+                                        <li><div class="name">AI for Social Good</div></li>
+                                        <li><div class="name">IoT &amp; Robotics</div></li>
+                                        <li><div class="name">FinTech &amp; Microfinance</div></li>
+                                        <li><div class="name">NGO &amp; Development Sector</div></li>
+                                        <li><div class="name">Telecommunications &amp; IT Infrastructure</div></li>
+                                        <li><div class="name">Education &amp; Training</div></li>
+                                        <li><div class="name">Leadership &amp; Community Engagement</div></li>
                                     </ul>
                                 </div>
                             </div>
@@ -656,7 +1026,7 @@
                                                             <div class="image">
                                                                 <a href="images/recommand/rec1.png" class="has-popup-image">
 
-                                                                    <img src="images/recommand/rec1.png" alt="LinkedIn recommendation screenshot 1" class="responsive" />
+                                                                    <img src="images/recommand/rec1.png" alt="" class="responsive" />
 
                                                                     <span class="info">
 
@@ -694,7 +1064,7 @@
                                                             <div class="image">
                                                                 <a href="images/recommand/rec2.png" class="has-popup-image">
 
-                                                                    <img src="images/recommand/rec2.png" alt="LinkedIn recommendation screenshot 2" class="responsive" />
+                                                                    <img src="images/recommand/rec2.png" alt="" class="responsive" />
 
                                                                     <span class="info">
 
@@ -732,7 +1102,7 @@
                                                             <div class="image">
                                                                 <a href="images/recommand/rec3.png" class="has-popup-image">
 
-                                                                    <img src="images/recommand/rec3.png" alt="LinkedIn recommendation screenshot 3" class="responsive" />
+                                                                    <img src="images/recommand/rec3.png" alt="" class="responsive" />
 
                                                                     <span class="info">
 
@@ -771,7 +1141,7 @@
                                                             <div class="image">
                                                                 <a href="images/recommand/rec4.png" class="has-popup-image">
 
-                                                                    <img src="images/recommand/rec4.png" alt="LinkedIn recommendation screenshot 4" class="responsive" />
+                                                                    <img src="images/recommand/rec4.png" alt="" class="responsive" />
 
                                                                     <span class="info">
 
@@ -810,7 +1180,7 @@
                                                             <div class="image">
                                                                 <a href="images/recommand/rec5.png" class="has-popup-image">
 
-                                                                    <img src="images/recommand/rec5.png" alt="LinkedIn recommendation screenshot 5" class="responsive" />
+                                                                    <img src="images/recommand/rec5.png" alt="" class="responsive" />
 
                                                                     <span class="info">
 
@@ -849,7 +1219,7 @@
                                                             <div class="image">
                                                                 <a href="images/recommand/rec6.png" class="has-popup-image">
 
-                                                                    <img src="images/recommand/rec6.png" alt="LinkedIn recommendation screenshot 6" class="responsive" />
+                                                                    <img src="images/recommand/rec6.png" alt="" class="responsive" />
 
                                                                     <span class="info">
 
@@ -899,7 +1269,7 @@
                     <div class="content works">
 
                         <!-- title -->
-                        <div class="title">Major Projects</div>
+                        <div class="title">Recent Works</div>
 
                         <!-- filters -->
                         <div class="filter-menu filter-button-group">
@@ -907,34 +1277,98 @@
                                 <label><input type="radio" name="fl_radio" value="grid-item" />All</label>
                             </div>
                             <div class="f_btn">
-                                <label><input type="radio" name="fl_radio" value="design" />Major Projects</label>
+                                <label><input type="radio" name="fl_radio" value="research" />Research</label>
                             </div>
                             <div class="f_btn">
-                                <label><a href="#other-projects-card">Other Projects</a></label>
+                                <label><input type="radio" name="fl_radio" value="project" />Projects</label>
                             </div>
+
+    <!-- Filter for other projects -->
+    <div class="f_btn">
+        <label><input type="radio" name="fl_radio" value="other" />Other Projects</label>
+    </div>
+                            
                         </div>
 
                         <!-- content -->
                         <div class="row grid-items border-line-v">
-                            <!-- Digitization of Credit & Client service -->
-                            <div class="col col-d-6 col-t-6 col-m-12 grid-item design border-line-h">
+
+                            <!-- work item photo -->
+                            <!-- Custom Project & Research Items -->
+
+                            <!-- Biometric Solutions for Financial Access -->
+                            <div class="col col-d-6 col-t-6 col-m-12 grid-item project border-line-h">
                                 <div class="box-item">
                                     <div class="image">
-                                        <a href="#popup-dcs" class="has-popup-media">
-                                            <img src="images/works/DCS_Positive Impact.jpg" alt="Digitization of Credit and Client Service project screenshot" />
+                                        <a href="#popup-biometric" class="has-popup-media">
+                                            <img src="images/works/bio/bio-1.jpg" alt="Biometric Solutions for Financial Access" />
                                             <span class="info">
                                                 <span class="ion ion-images"></span>
                                             </span>
                                         </a>
                                     </div>
                                     <div class="desc">
-                                        <a href="#popup-dcs" class="name has-popup-media">Digitization of Credit & Client service</a>
-                                        <div class="category">Major Projects</div>
+                                        <a href="#popup-biometric" class="name has-popup-media">Biometric Solutions for Financial Access (2025) </a>
+                                        <div class="category">Projects</div>
+                                    </div>
+                                    <!-- popup: Biometric Solutions -->
+                                    <div id="popup-biometric" class="popup-box mfp-fade mfp-hide">
+                                        <div class="content">
+                                            <div class="image">
+                                                <img src="images/works/bio/bio-1.jpg" alt="Biometric Solutions" />
+                                            </div>
+                                            <div class="desc">
+                                                <div class="post-box">
+                                                    <h1>Biometric Solutions for Financial Access</h1>
+                                                    <div class="blog-detail">Solution Architecture &amp; Project Leadership</div>
+                                                    <div class="blog-content">
+                                                        <p>Designed and led the development of a secure biometric system enabling fingerprint‑based client enrolment and loan disbursement in remote areas, eliminating the need for branch visits.</p>
+                                                        <h2>Pilot &amp; Impact</h2>
+                                                        <ul>
+                                                            <li>Piloted across seven branches with over 1,200 clients onboarded and 100+ loan disbursements via doorstep services.</li>
+                                                            <li>Enhanced operational efficiency, client security and financial access for rural populations.</li>
+                                                        </ul>
+                                                        <h2>Next Phase</h2>
+                                                        <p>Currently advancing the platform with AI‑powered image‑based biometric verification to replace physical fingerprint devices. This scalable solution will roll out across 3,000+ branches nationwide to boost financial inclusion and reduce fraud.</p>
+                                                        <h2>Media</h2>
+                                                        <div class="image">
+                                                            <img src="images/works/bio/bio-2.jpeg" alt="Biometric System illustration" />
+                                                        </div>
+                                                        <div class="image">
+                                                            <img src="images/works/bio/bio-3.jpg" alt="Biometric System illustration" />
+                                                        </div>
+                                                        <!-- <div class="image">
+                                                            <iframe src="images/works/bio/bio-3.jpg" width="100%" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                                        </div> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col col-d-6 col-t-6 col-m-12 grid-item project border-line-h">
+                                <div class="box-item">
+                                    <div class="image">
+                                        <a href="#popup-dcs" class="has-popup-media">
+                                            <img src="images/works/dcs/dcs-1.jpeg" alt="" />
+                                            <span class="info">
+                                                <span class="ion ion-images"></span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="desc">
+                                        <a href="#popup-dcs" class="name has-popup-media">Digitization of Credit &amp; Client Service (2024) </a>
+                                        <div class="category">Projects</div>
                                     </div>
                                     <div id="popup-dcs" class="popup-box mfp-fade mfp-hide">
                                         <div class="content">
                                             <div class="image">
-                                                <img src="images/works/DCS_Positive Impact.jpg" alt="Detailed view of Digitization of Credit and Client Service project" />
+                                                <img src="images/works/dcs/dcs-2.jpeg" alt="DCS" width="500" height="600"/>
+                                            </div>
+                                            <div class="image">
+                                                            <iframe src="https://drive.google.com/file/d/1J7f6jMGSc8UKWtrbFLM5TE9l5PPPxXtd/preview"  width="100%" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                                            
                                             </div>
                                             <div class="desc">
                                                 <div class="post-box">
@@ -985,6 +1419,7 @@
                                                                 </li>
                                                                 <li><span class="highlight">Efficiency Gains:</span>
                                                                     <ul>
+                                                                        
                                                                         <li>60 minutes saved per member for each field officer</li>
                                                                         <li>High transaction volumes handled:
                                                                             <ul>
@@ -1003,79 +1438,52 @@
                                                                 <li>Significant contribution to environmental sustainability</li>
                                                             </ul>
                                                     </div>
-
+                                                     <h2>Media</h2>
+                                                        <div class="image">
+                                                            
+                                                             <img src="images/works/dcs/DCS_Positive Impact.jpg" alt="">
+                                                        </div>
+                                                        
+                                                        
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Biometric Solutions for Financial Access -->
-                            <div class="col col-d-6 col-t-6 col-m-12 grid-item design border-line-h">
-                                <div class="box-item">
-                                    <div class="image">
-                                        <a href="#popup-bio" class="has-popup-media">
-                                            <img src="images/works/work1.jpg" alt="Biometric Solutions for Financial Access project image" />
-                                            <span class="info">
-                                                <span class="ion ion-images"></span>
-                                            </span>
-                                        </a>
-                                    </div>
-                                    <div class="desc">
-                                        <a href="#popup-bio" class="name has-popup-media">Biometric Solutions for Financial Access</a>
-                                        <div class="category">Major Projects</div>
-                                    </div>
-                                    <div id="popup-bio" class="popup-box mfp-fade mfp-hide">
-                                        <div class="content">
-                                            <div class="image">
-                                                <img src="images/works/work1.jpg" alt="Detailed view of Biometric Solutions for Financial Access project" />
-                                            </div>
-                                            <div class="desc">
-                                                <div class="post-box">
-                                                    <h1>Biometric Solutions for Financial Access</h1>
-                                                    <div class="blog-detail">Sept 2024 – Mar 2025 | Microfinance, BRAC</div>
-                                                    <div class="blog-content">
-                                                        <ul>
-                                                            <li>Designed and led the development of a biometric system which enabled secure fingerprint-based client enrollment and loan disbursement in remote areas, eliminating the need for branch visits. Successfully piloted across 7 branches, onboarded 1,200+ clients and completed 100+ loan disbursement through doorstep services. The solution significantly improved operational efficiency, security and financial access for remote regions.</li>
-                                                            <li>Currently advancing the system with AI-powered image-based biometric verification to replace fingerprint devices, aimed at scalable nationwide rollout across 3,000+ branches to boost financial inclusion and reduce fraud.</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Efficient and Secure Repayment Collection through MFS -->
-                            <div class="col col-d-6 col-t-6 col-m-12 grid-item design border-line-h">
+                            <!-- MFS Repayment Collection & Account Management -->
+                            <div class="col col-d-6 col-t-6 col-m-12 grid-item project border-line-h">
                                 <div class="box-item">
                                     <div class="image">
                                         <a href="#popup-mfs" class="has-popup-media">
-                                            <img src="images/works/work2.jpg" alt="Efficient and Secure Repayment Collection through MFS project image" />
+                                            <img src="images/works/MFS/mfs-2.png" alt="MFS Repayment Collection" />
                                             <span class="info">
                                                 <span class="ion ion-images"></span>
                                             </span>
                                         </a>
                                     </div>
                                     <div class="desc">
-                                        <a href="#popup-mfs" class="name has-popup-media">Efficient and Secure Repayment Collection through MFS</a>
-                                        <div class="category">Major Projects</div>
+                                        <a href="#popup-mfs" class="name has-popup-media">MFS Repayment Collection &amp; Account Management (2023) </a>
+                                        <div class="category">Projects</div>
                                     </div>
+                                    <!-- popup: MFS Repayment Collection & Account Management -->
                                     <div id="popup-mfs" class="popup-box mfp-fade mfp-hide">
                                         <div class="content">
                                             <div class="image">
-                                                <img src="images/works/work2.jpg" alt="Detailed view of Efficient and Secure Repayment Collection through MFS project" />
+                                                <img src="images/works/MFS/mfs-1.png" alt="MFS Repayment Collection" />
                                             </div>
                                             <div class="desc">
                                                 <div class="post-box">
-                                                    <h1>Efficient and Secure Repayment Collection through MFS</h1>
-                                                    <div class="blog-detail">Mar 2021 – Sept 2021 | Microfinance, BRAC</div>
+                                                    <h1>MFS Repayment Collection &amp; Account Management</h1>
+                                                    <div class="blog-detail">Project Leadership &amp; API Integration</div>
                                                     <div class="blog-content">
+                                                        <p>Integrated a Mobile Financial Service (MFS) within BRAC Microfinance’s collection app to enable secure collection of loan instalments and savings through digital payments.</p>
                                                         <ul>
-                                                            <li>MFS service in BRAC Microfinance's collection app, facilitating 20k+ field officials to collect loan installments and savings securely by MFS service. Benefiting 10 million clients, saving time and money. Project involved bKash (MFS Partner) webhook API and 2 BRAC ERP API integrations.</li>
+                                                            <li>Empowered 20&nbsp;k field officials to collect repayments efficiently, benefiting 10&nbsp;million clients.</li>
+                                                            <li>Integrated bKash webhook API and two BRAC ERP APIs to automate payment workflows.</li>
+                                                            <li>Saved time and transaction costs while reducing fraud and manual errors.</li>
                                                         </ul>
+                                                      
                                                     </div>
                                                 </div>
                                             </div>
@@ -1084,34 +1492,39 @@
                                 </div>
                             </div>
 
-                            <!-- Digital Cash Transfer (DCT) -->
-                            <div class="col col-d-6 col-t-6 col-m-12 grid-item design border-line-h">
+                            <!-- Digital Cash Transfer (DCT) Platform -->
+                            <div class="col col-d-6 col-t-6 col-m-12 grid-item project border-line-h">
                                 <div class="box-item">
                                     <div class="image">
                                         <a href="#popup-dct" class="has-popup-media">
-                                            <img src="images/works/work3.jpg" alt="Digital Cash Transfer project image" />
+                                            <img src="images/works/DCT/dct-2.jpg" alt="Digital Cash Transfer" />
                                             <span class="info">
                                                 <span class="ion ion-images"></span>
                                             </span>
                                         </a>
                                     </div>
                                     <div class="desc">
-                                        <a href="#popup-dct" class="name has-popup-media">Digital Cash Transfer (DCT)</a>
-                                        <div class="category">Major Projects</div>
+                                        <a href="#popup-dct" class="name has-popup-media">Digital Cash Transfer (DCT) Platform (2023) </a>
+                                        <div class="category">Projects</div>
                                     </div>
+                                    <!-- popup: Digital Cash Transfer (DCT) Platform -->
                                     <div id="popup-dct" class="popup-box mfp-fade mfp-hide">
                                         <div class="content">
                                             <div class="image">
-                                                <img src="images/works/work3.jpg" alt="Detailed view of Digital Cash Transfer project" />
+                                                <img src="images/works/DCT/dct-1.png" alt="DCT Platform" />
                                             </div>
                                             <div class="desc">
                                                 <div class="post-box">
-                                                    <h1>Digital Cash Transfer (DCT)</h1>
-                                                    <div class="blog-detail">Jan 2022 – Apr 2022 | Microfinance, BRAC</div>
+                                                    <h1>Digital Cash Transfer (DCT) Platform</h1>
+                                                    <div class="blog-detail">Product Design &amp; System Integration</div>
                                                     <div class="blog-content">
+                                                        <p>Created a versatile digital cash transfer platform serving all 17+ BRAC programmes and acting as an alternative loan disbursement channel for microfinance clients.</p>
                                                         <ul>
-                                                            <li>Established a versatile platform for all 17+ BRAC programmes, facilitating beneficiary disbursements and serving as an alternative loan disbursement channel for BRAC Microfinance. Required integration with 4 key bKash (MFS partner).</li>
+                                                            <li>Integrated four core bKash APIs to automate beneficiary disbursements securely and efficiently.</li>
+                                                            <li>Facilitated fast, reliable and transparent cash transfers to beneficiaries across Bangladesh.</li>
+                                                            <li>Improved financial inclusion and reduced the need for physical cash handling.</li>
                                                         </ul>
+                                                      
                                                     </div>
                                                 </div>
                                             </div>
@@ -1120,34 +1533,39 @@
                                 </div>
                             </div>
 
-                            <!-- Branch Management Supervision (BMSM) Mobile App -->
-                            <div class="col col-d-6 col-t-6 col-m-12 grid-item design border-line-h">
+                            <!-- Branch Management & Sales Monitoring (BMSM) App -->
+                            <div class="col col-d-6 col-t-6 col-m-12 grid-item project border-line-h">
                                 <div class="box-item">
                                     <div class="image">
                                         <a href="#popup-bmsm" class="has-popup-media">
-                                            <img src="images/works/work4.jpg" alt="Branch Management Supervision Mobile App project image" />
+                                            <img src="images/works/bmsm/bmsm-1.png" alt="Branch Management App" />
                                             <span class="info">
                                                 <span class="ion ion-images"></span>
                                             </span>
                                         </a>
                                     </div>
                                     <div class="desc">
-                                        <a href="#popup-bmsm" class="name has-popup-media">Branch Management Supervision (BMSM) Mobile App</a>
-                                        <div class="category">Major Projects</div>
+                                        <a href="#popup-bmsm" class="name has-popup-media">BRAC Microfinance supervision Management &amp; (BMSM) Mobile App (2022) </a>
+                                        <div class="category">Projects</div>
                                     </div>
+                                    <!-- popup: Branch Management & Sales Monitoring (BMSM) App -->
                                     <div id="popup-bmsm" class="popup-box mfp-fade mfp-hide">
                                         <div class="content">
                                             <div class="image">
-                                                <img src="images/works/work4.jpg" alt="Detailed view of Branch Management Supervision Mobile App project" />
+                                                <img src="images/works/bmsm/bmsm-2.png" alt="BMSM App" />
                                             </div>
                                             <div class="desc">
                                                 <div class="post-box">
-                                                    <h1>Branch Management Supervision (BMSM) Mobile App</h1>
-                                                    <div class="blog-detail">Jun 2021 – Dec 2022 | Microfinance, BRAC</div>
+                                                    <h1>BRAC Microfinance supervision Management &amp; (BMSM) Mobile App </h1>
+                                                    <div class="blog-detail">Product Manager &amp; Technical Lead</div>
                                                     <div class="blog-content">
+                                                        <p>Led development of a mobile application connected to BRAC Microfinance’s core banking system to provide real‑time reporting and analytics for branch managers.</p>
                                                         <ul>
-                                                            <li>Managed development of a mobile app linked to BRAC Microfinance's core banking system, catering to reporting needs of 3000+ Branch Managers. Offering 30+ reports, it enhances managerial oversight, decision-making efficiency, timesaving, and reduces paper usage.</li>
+                                                            <li>Delivered 30+ operational and sales reports accessible to over 3,000 branch managers.</li>
+                                                            <li>Enhanced oversight, decision‑making and resource allocation.</li>
+                                                            <li>Significantly reduced paper use and saved managers’ time.</li>
                                                         </ul>
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
@@ -1156,34 +1574,70 @@
                                 </div>
                             </div>
 
-                            <!-- ATOM Robot: Revolutionizing Indoor Service with IoT and Robotics -->
-                            <div class="col col-d-6 col-t-6 col-m-12 grid-item design border-line-h">
+                            <!-- ATOM Robot: Revolutionizing Indoor Service -->
+                            <div class="col col-d-6 col-t-6 col-m-12 grid-item research border-line-h">
                                 <div class="box-item">
                                     <div class="image">
                                         <a href="#popup-atom" class="has-popup-media">
-                                            <img src="images/works/work5.jpg" alt="ATOM Robot project image" />
+                                            <img src="images/works/atom/atom-1.png" alt="ATOM Robot" />
                                             <span class="info">
                                                 <span class="ion ion-images"></span>
                                             </span>
                                         </a>
                                     </div>
                                     <div class="desc">
-                                        <a href="#popup-atom" class="name has-popup-media">ATOM Robot: Revolutionizing Indoor Service with IoT and Robotics</a>
-                                        <div class="category">Major Projects</div>
+                                        <a href="#popup-atom" class="name has-popup-media">ATOM Robot – Indoor Service Robot (2021)</a>
+                                        <div class="category">Research</div>
                                     </div>
+                                    <!-- popup: ATOM Robot – Revolutionizing Indoor Service -->
                                     <div id="popup-atom" class="popup-box mfp-fade mfp-hide">
                                         <div class="content">
                                             <div class="image">
-                                                <img src="images/works/work5.jpg" alt="Detailed view of ATOM Robot project" />
+                                                <img src="images/works/atom/atom-2.png" alt="ATOM Robot" />
                                             </div>
+
+                                             <div class="image">
+                                                            <iframe src="https://drive.google.com/file/d/1X29VP4nggIEQetYteCmtL_-19b24VzWu/preview" width="100%" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                             </div>
+                                            
                                             <div class="desc">
                                                 <div class="post-box">
-                                                    <h1>ATOM Robot: Revolutionizing Indoor Service with IoT and Robotics</h1>
-                                                    <div class="blog-detail">Jan 2020 – Feb 2021 | Powered by LEVERnGEAR Limited – R&amp;D Project</div>
+                                                    <h1>ATOM Robot – Revolutionizing Indoor Service</h1>
+                                                    <div class="blog-detail">R&amp;D Project, Robotics &amp; IoT</div>
                                                     <div class="blog-content">
+                                                        <p>ATOM is an intelligent indoor service robot designed for versatile tasks such as goods transportation, floor cleaning and delivery services.</p>
                                                         <ul>
-                                                            <li>ATOM has a dynamic path-planning capability. It uses IR sensors for line-grid paths or a camera for virtual grid paths and fiducial markers. Versatile applications include goods transportation, floor cleaning, delivery services, and more. Controlled via mobile apps, it can handle payloads of up to 20kg+ efficiently.</li>
+                                                            <li>Features dynamic path planning using IR sensors for line‑grid paths or a camera for virtual grid paths with fiducial markers.</li>
+                                                            <li>Supports payloads of over 20&nbsp;kg and can be controlled via mobile applications.</li>
+                                                            <li>Demonstrates how IoT and robotics can transform service delivery in indoor environments.</li>
                                                         </ul>
+                                                        <h2>Media</h2>
+
+                                                        <!-- Gallery grid for the ATOM project -->
+                                                        <div class="gallery-grid">
+                                                            <a href="images/works/atom/atom-4.jpg" class="has-popup-image"><img src="images/works/atom/atom-4.jpg" alt="ATOM robot image 1" /></a>
+                                                            <a href="images/works/atom/atom-5.jpg" class="has-popup-image"><img src="images/works/atom/atom-5.jpg" alt="ATOM robot image 2" /></a>
+                                                            <a href="images/works/atom/atom-6.jpg" class="has-popup-image"><img src="images/works/atom/atom-6.jpg" alt="ATOM robot image 3" /></a>
+                                                        </div>
+                                                        <div class="image">
+                                                            <iframe src="https://drive.google.com/file/d/1XEMrxF0szK4iisapYKHU-eEo5eJVWGHv/preview" width="50%" height="220" frameborder="4" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                                            <iframe src="https://drive.google.com/file/d/1XGmoO1Epd56Jhv2JAfup55nvTu5Saxf_/preview" width="50%" height="220" frameborder="4" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                                            
+                                                        </div>
+                                                        <div class="image">
+                                                            
+                                                            <iframe src="https://drive.google.com/file/d/1xoDamHqw7fV_0ZFxgHYkXcLaFNQqDuo5/preview" width="50%" height="220" frameborder="4" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                                            <iframe src="https://drive.google.com/file/d/1yFmEoA-ODzLA3VTgxZgyuPQDI55njzfr/preview" width="50%" height="220" frameborder="4" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                                            
+                                                        </div>
+
+                                                        <div class="image">
+                                                            
+                                                            <iframe src="https://drive.google.com/file/d/1yFgkjd92ct8aRpgwBBWPIkrg5IVfKDox/preview" width="50%" height="220" frameborder="4" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                                            <iframe src="https://drive.google.com/file/d/1yFImgeNuBU9IIwQ-40tlxAQMzsbr43Rl/preview" width="50%" height="220" frameborder="4" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                                            
+                                                        </div>
+                                                       
                                                     </div>
                                                 </div>
                                             </div>
@@ -1192,33 +1646,192 @@
                                 </div>
                             </div>
 
-                            <!-- Falcon Training Device: Mobile-Intranet Enabled device for Off-Grid Operation in remote area -->
-                            <div class="col col-d-6 col-t-6 col-m-12 grid-item design border-line-h">
+                            <!-- Falcon Training Device -->
+                            <div class="col col-d-6 col-t-6 col-m-12 grid-item research border-line-h">
                                 <div class="box-item">
                                     <div class="image">
                                         <a href="#popup-falcon" class="has-popup-media">
-                                            <img src="images/works/work6.jpg" alt="Falcon Training Device project image" />
+                                            <img src="images/works/falcon/falcon-1.png" alt="Falcon Training Device" />
                                             <span class="info">
                                                 <span class="ion ion-images"></span>
                                             </span>
                                         </a>
                                     </div>
                                     <div class="desc">
-                                        <a href="#popup-falcon" class="name has-popup-media">Falcon Training Device: Mobile-Intranet Enabled device for Off-Grid Operation in remote area</a>
-                                        <div class="category">Major Projects</div>
+                                        <a href="#popup-falcon" class="name has-popup-media">Mobile-Intranet Enabled device for Off-Grid Operation in remote area (2021)</a>
+                                        <div class="category">Research</div>
                                     </div>
+                                    <!-- popup: Falcon Training Device -->
                                     <div id="popup-falcon" class="popup-box mfp-fade mfp-hide">
                                         <div class="content">
                                             <div class="image">
-                                                <img src="images/works/work6.jpg" alt="Detailed view of Falcon Training Device project" />
+                                                <img src="images/works/falcon/flacon-2.png" alt="Falcon Training Device" />
+                                            </div>
+
+                                            
+                                            <div class="image">
+                                                            <iframe src="https://drive.google.com/file/d/1c9bwGOV2vnEQ6vzZ1r5uerE8adHX0MrO/preview" width="100%" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                                             </div>
                                             <div class="desc">
                                                 <div class="post-box">
-                                                    <h1>Falcon Training Device: Mobile-Intranet Enabled device for Off-Grid Operation in remote area</h1>
-                                                    <div class="blog-detail">Jan 2021 – Oct 2021 | Powered by A Bahrain Software Company – R&amp;D Project</div>
+                                                    <h1>Falcon Training Device</h1>
+                                                    <div class="blog-detail">R&amp;D Project, Mobile &amp; RF Control</div>
                                                     <div class="blog-content">
+                                                        <p>Developed a training device for falconry that utilises radio frequency for remote operation in off‑grid locations such as deserts.</p>
                                                         <ul>
-                                                            <li>This work introduces a falcon training device utilizing radio frequency for operation in remote locations like deserts. Controlled via mobile apps accessing intranet connectivity, ensuring seamless operation even where network options are unavailable.</li>
+                                                            <li>Controlled via mobile applications using intranet connectivity to enable seamless operation without cellular networks.</li>
+                                                            <li>Showcases innovative use of wireless communication and IoT to train animals in remote environments.</li>
+                                                        </ul>
+                                                       <div class="image">
+                                                        <img src="images/works/falcon/flacon-3.png" alt="Falcon Training Device" />
+                                                        </div>
+                                                      
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 2D Surface Mapping for Mine Detection -->
+                            <div class="col col-d-6 col-t-6 col-m-12 grid-item research border-line-h">
+                                <div class="box-item">
+                                    <div class="image">
+                                        <a href="#popup-mapping-old" class="has-popup-media">
+                                            <img src="images/works/2D/2D-1.png" alt="2D Surface Mapping" />
+                                            <span class="info">
+                                                <span class="ion ion-images"></span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="desc">
+                                        <a href="#popup-mapping-old" class="name has-popup-media">2D surface mapping for mine detection using wireless network (2017)</a>
+                                        <div class="category">Research</div>
+                                    </div>
+                                    <!-- popup: 2D Surface Mapping for Mine Detection -->
+                                    <div id="popup-mapping-old" class="popup-box mfp-fade mfp-hide">
+                                        <div class="content">
+                                            <div class="image">
+                                                <img src="images/works/2D/2D-2.png" alt="Mine Mapping Research" />
+                                            </div>
+
+                                             <!-- Replace the href value with your actual paper URL -->
+                                         
+                                            <div class="desc">
+                                                <div class="post-box">
+                                                    <h1>2D Surface Mapping for Mine Detection</h1>
+                                                    <div class="blog-detail">ICCRE 2017 – Published Research</div>
+                                                       <a itemprop="url" href="https://ieeexplore.ieee.org/abstract/document/7935066"
+                                                target="_blank" rel="noopener"
+                                                aria-label="Read the MinerBot paper"
+                                                style="display:inline-block;margin-top:.75rem;background:#1a73e8;color:#fff;text-decoration:none;padding:.6rem 1rem;border-radius:10px;font-weight:600;">
+                                                Read the paper
+                                            </a>
+                                                    <div class="blog-content">
+                                                        <p>Explored the use of wireless networking and 2D surface mapping techniques to detect buried mines. This research focused on improving safety and accuracy in de‑mining operations by using intelligent mapping algorithms.</p>
+                                                        <ul>
+                                                            <li>Developed algorithms to generate two‑dimensional maps of subterranean surfaces.</li>
+                                                            <li>Presented at the ICCRE 2017 conference (Paper ID: ICCRE2017‑077).</li>
+                                                        </ul>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Adventure of Brave Mom – RPG Game -->
+                            <div class="col col-d-6 col-t-6 col-m-12 grid-item research border-line-h">
+                                <div class="box-item">
+                                    <div class="image">
+                                        <a href="#popup-rpg" class="has-popup-media">
+                                            <img src="images/works/game/game-1.webp" alt="Role-playing Educational Game as a Learning tool - The Adventure of a New Mother " />
+                                            <span class="info">
+                                                <span class="ion ion-images"></span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="desc">
+                                        <a href="#popup-rpg" class="name has-popup-media">Role-playing Educational Game as a Learning tool - The Adventure of a New Mother (2017) </a>
+                                        <div class="category">Research</div>
+                                    </div>
+                                    <!-- popup: Adventure of Brave Mom – RPG Game -->
+                                    <div id="popup-rpg" class="popup-box mfp-fade mfp-hide">
+                                        <div class="content">
+                                            <div class="image">
+                                                <img src="images/works/game/game-2.png" alt="Adventure of Brave Mom" />
+                                            </div>
+                                            <div class="desc">
+                                                <div class="post-box">
+                                                    <h1>Role-playing Educational Game as a Learning tool - The Adventure of a New Mother (2017)</h1>
+                                                    <div class="blog-detail">Research &amp; Development</div>
+                                                    <div class="blog-content">
+                                                        <p>A role‑playing educational game designed for expectant and new mothers to learn about maternal and child health through interactive storytelling and gameplay.</p>
+                                                        <ul>
+                                                            <li>Developed under the supervision of Professor Farruk Ahmed at Independent University, Bangladesh.</li>
+                                                            <li>Investigated how game mechanics can enhance learning and retention in health education.</li>
+                                                        </ul>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            
+
+
+                            <!-- Other Projects Card inserted at end of works section -->
+                            <div class="col col-d-6 col-t-6 col-m-12 grid-item other border-line-h">
+                                <div class="box-item">
+                                    <div class="image">
+                                        <a href="#popup-otherprojects" class="has-popup-media">
+                                            <img src="images/works/other/other-projects.png" alt="Other Projects" />
+                                            <span class="info">
+                                                <span class="ion ion-images"></span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="desc">
+                                        <a href="#popup-otherprojects" class="name has-popup-media">Other Projects</a>
+                                        <div class="category">Projects</div>
+                                    </div>
+                                    <!-- popup for Other Projects -->
+                                    <div id="popup-otherprojects" class="popup-box mfp-fade mfp-hide">
+                                        <div class="content">
+                                            <div class="image">
+                                                <img src="images/works/other/other-projects.png" alt="Other Projects" />
+                                            </div>
+                                            <div class="desc">
+                                                <div class="post-box">
+                                                    <h1>Other Projects</h1>
+                                                    <div class="blog-detail">Various Software &amp; Technology Projects</div>
+                                                    <div class="blog-content">
+                                                        <p>A collection of additional projects covering diverse domains:</p>
+                                                        <ul>
+                                                            <li>Digitized Client Interaction Point for RMG workers</li>
+                                                            <li>Digitalization of Call center</li>
+                                                            <li>Social Media Monitoring Tool &amp; Chatbot</li>
+                                                            <li>Hotel Management System</li>
+                                                            <li>Dhaka City's Waste Management and Dengue Campaign Projects (Complaint and Query Management)</li>
+                                                            <li>Central Processing Center‑CPC Project of National Board of Revenue (NBR), Bangladesh</li>
+                                                            <li>Grameenphone Postpaid Credit &amp; Collection CRM (GPCNC‑CRM)</li>
+                                                            <li>Customer Relationship &amp; Complaint Management System (CMS)</li>
+                                                            <li>Transport Management System (Web &amp; Mobile)</li>
+                                                            <li>Doctor's Appointment Management System</li>
+                                                            <li>Inventory Management System</li>
+                                                            <li>ChaalDaal – Shop Management (POS)</li>
+                                                            <li>RPG Game Development – Mother &amp; Child health care</li>
+                                                            <li>SEFF – Fire Monitoring System</li>
+                                                            <li>Mother &amp; Child Health Care System</li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -1237,42 +1850,8 @@
             </div>
 
             <!--
-                                Card - Other Projects
-                        -->
-            <div class="card-inner" id="other-projects-card">
-                <div class="card-wrap">
-                    <div class="content">
-                        <div class="title">Other Projects</div>
-                        <div class="row">
-                            <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
-                                <div class="text">
-                                    <ul>
-                                        <li>Digitized Client Interaction Point for RMG workers - 2020</li>
-                                        <li>Digitalization of Call center - 2020</li>
-                                        <li>Social Media Monitoring Tool &amp; Chatbot - 2019</li>
-                                        <li>Hotel Management System - 2019</li>
-                                        <li>Dhaka City's Waste Management Project &amp; Dhaka City's Dengue Campaign Project (Complaint and Query Management) - 2019</li>
-                                        <li>Central Processing Center-CPC Project of National Board of Revenue (NBR), Bangladesh - 2018</li>
-                                        <li>Grameenphone Postpaid Credit and Collection CRM (GPCNC-CRM) - 2018</li>
-                                        <li>Customer relationship &amp; Complaint Management System (CMS) - 2018</li>
-                                        <li>Transport Management System (Web Application &amp; Mobile Application) - 2018</li>
-                                        <li>Doctor's Appointment Management System (Web app) - 2018</li>
-                                        <li>Inventory Management System (Web Applications) - 2018</li>
-                                        <li>ChaalDaal - Shop Management (POS) - 2017</li>
-                                        <li>RPG Game Development - Mother and Child health care - 2016</li>
-                                        <li>SEFF- Fire Monitoring System - 2016</li>
-                                        <li>Mother and Child Health Care System - 2015</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--
-                                Card - Blog
-                        -->
+                Card - Blog
+			-->
             <div class="card-inner blog" id="blog-card">
                 <div class="card-wrap">
 
@@ -1412,10 +1991,10 @@
                                 <div class="map" id="map"></div>
                                 <div class="info-list">
                                     <ul>
-                                        <li><strong>Address . . . . .</strong> California, USA</li>
-                                        <li><strong>Email . . . . .</strong> adlard@example.com</li>
-                                        <li><strong>Phone . . . . .</strong> +123 654 78900</li>
-                                        <li><strong>Freelance . . . . .</strong> Available</li>
+                                        <li><strong>Address . . . . .</strong> Dhaka, Bangladesh</li>
+                                        <li><strong>Email . . . . .</strong> <a href="mailto:tanviralam0047@gmail.com">tanviralam0047@gmail.com</a></li>
+                                        <li><strong>Phone . . . . .</strong> <a href="tel:+8801726042222">+880&nbsp;17&nbsp;2604&nbsp;2222</a></li>
+                                        <li><strong>Collaboration . . . . .</strong> Open to new opportunities</li>
                                     </ul>
                                 </div>
                             </div>
